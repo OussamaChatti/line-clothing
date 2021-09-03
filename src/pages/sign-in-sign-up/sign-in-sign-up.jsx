@@ -5,8 +5,8 @@
 
 const SignInSignUp = props => (
     <div className='sign-in-sign-up'>
-    <SignIn/>
-    <SignUp/>
+    <SignIn className='sign-in'/>
+    <SignUp className='sign-up'/>
     </div>
 );
 
