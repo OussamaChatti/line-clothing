@@ -1,4 +1,5 @@
  import React from 'react';
+ 
  import './form-input.scss';
 
 const FormInput = ({handlechange,label,value,...props}) => (
