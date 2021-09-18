@@ -28,4 +28,23 @@
     margin-left: auto;
     font-size: 36px;
   }
+ 
+  .test-warning{
+    &::first-line{
+      color:gray;
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    & pre{
+      font-size: 20px;
+      font-weight: lighter;
+    }
+
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+  }
 }
