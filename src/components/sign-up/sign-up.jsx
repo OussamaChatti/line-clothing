@@ -5,7 +5,7 @@
 
  import {auth,createUserProfileDocument} from '../../firebase/firebase.utils.js';
 
- import './sign-up.scss';
+ import {SignUpContainer,TitleContainer,ButtonContainer} from './sign-up.styles';
 
  class SignUp extends React.Component {
      constructor(props){
@@ -50,8 +50,8 @@
     render(){
         const {displayName,email,password,confirmPassword} = this.state;
         return (
-            <div className='sign-up'>
-                <h1 className='title'>Don't have an account?</h1>
+            <SignUpContainer>
+                <TitleContainer>Don't have an account?</TitleContainer>
                 <span>Sign up with your email and password</span>
                 <form className='sign-up-form' onSubmit={this.handleSubmit}>
                     <FormInput
@@ -86,9 +86,11 @@
                     label='Confirm Password'
                     required
                     />
+                    <ButtonContainer>
                     <CustomButton type='submit'>SIGN UP</CustomButton>
+                    </ButtonContainer>
                 </form>
-            </div>
+            </SignUpContainer>
         );
     }
  }

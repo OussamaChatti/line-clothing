@@ -1,24 +1,23 @@
 import React from 'react';
 
-import './about.scss';
+import { AboutContainer,IconContainer,PhotoContainer,SocialContainer } from './about.styles';
 
 const AboutPage = () => (
-<div className='about-page'>
+<AboutContainer>
     <br/>
     <h1>About This:</h1>
     <p>
         This is a portfolio project, a clothing E-Commerce website created using React + Redux
-        <img  className='icon' src='https://i.ibb.co/9nB8h59/react-redux.png' alt='react-redux'/>
+        <IconContainer src='https://i.ibb.co/9nB8h59/react-redux.png' alt='react-redux'/>
     </p>
     <br/>
     <h1>Author:</h1>
-    <img
-     className='photo'
+    <PhotoContainer
      src='https://i.ibb.co/z2D5gZC/profile.jpg'
      alt="Author"
     />
-    <h2>Oussama Chatti</h2>
-    <div class="social">
+    <h2 >Oussama Chatti</h2>
+    <SocialContainer>
 
          <a class="social-icon" data-tooltip="oussama.chatti.12@gmail.com" href="mailto:oussama.chatti.12@gmail.com">
               <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -36,9 +35,9 @@ const AboutPage = () => (
             <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
 
-    </div>
+    </SocialContainer>
 
-</div>
+</AboutContainer>
 );
 
 export default AboutPage;

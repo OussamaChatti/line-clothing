@@ -3,13 +3,13 @@
  import SignIn from '../../components/sign-in/sign-in.jsx';
  import SignUp from '../../components/sign-up/sign-up.jsx';
 
- import './sign-in-sign-up.scss';
+ import {SignInSignUpContainer} from './sign-in-sign-up.styles';
 
 const SignInSignUp = props => (
-    <div className='sign-in-sign-up'>
+    <SignInSignUpContainer>
     <SignIn className='sign-in'/>
     <SignUp className='sign-up'/>
-    </div>
+    </SignInSignUpContainer>
 );
 
 export default SignInSignUp;

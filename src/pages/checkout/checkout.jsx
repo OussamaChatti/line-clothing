@@ -7,40 +7,40 @@ import StripeCheckoutButton from '../../components/stripe-button/stripe-button';
 
 import { selectCartItems,selectCartTotal} from '../../redux/cart/cart.selectors';
 
-import './checkout.scss';
+import { CheckoutPageContainer,CheckoutHeader,HeaderBlock,TotalContainer,TestWarning } from './checkout.styles';
 
 const CheckoutPage = ({cartItems,total}) => (
-    <div className='checkout-page'>
-        <div className='checkout-header'>
-            <div className='header-block'>
+    <CheckoutPageContainer>
+        <CheckoutHeader>
+            <HeaderBlock>
                 <span>Product</span>
-            </div>
-            <div className='header-block'>
+            </HeaderBlock>
+            <HeaderBlock>
                 <span>Description</span>
-            </div>
-            <div className='header-block'>
+            </HeaderBlock>
+            <HeaderBlock>
                 <span>Quantity</span>
-            </div>
-            <div className='header-block'>
+            </HeaderBlock>
+            <HeaderBlock>
                 <span>Price</span>
-            </div>
-            <div className='header-block'>
+            </HeaderBlock>
+            <HeaderBlock>
                 <span>Remove</span>
-            </div>
-        </div>
+            </HeaderBlock>
+        </CheckoutHeader>
         {
             cartItems.map(cartItem => <CheckoutItem key={cartItem.id} cartItem={cartItem} />)
         }
-        <div className='total'>
+        <TotalContainer>
             <span>TOTAL: {total} TND</span>
-        </div>
+        </TotalContainer>
         <StripeCheckoutButton price={total}/>
-        <div className='test-warning'>
+        <TestWarning>
             This button is just for testing purposes please do not enter your real credit card informations
             <br/><br/> Use the following test card numbers for payments :<br/>
             <pre>NUMBER: 4242424242424242 - BRAND: Visa - CVC: Any 3 digits - EXP-DATE: Any future date</pre>
-        </div>
-    </div>
+        </TestWarning>
+    </CheckoutPageContainer>
 );
 const mapStateToProps = createStructuredSelector({
     cartItems : selectCartItems,
