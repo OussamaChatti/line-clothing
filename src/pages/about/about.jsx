@@ -19,20 +19,20 @@ const AboutPage = () => (
     <h2 >Oussama Chatti</h2>
     <SocialContainer>
 
-         <a class="social-icon" data-tooltip="oussama.chatti.12@gmail.com" href="mailto:oussama.chatti.12@gmail.com">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
+         <a data-tooltip="oussama.chatti.12@gmail.com" href="mailto:oussama.chatti.12@gmail.com">
+              <i className="fa fa-envelope" aria-hidden="true"></i>
          </a>
 
-         <a class="social-icon" data-tooltip="GitHub" href="https://github.com/OussamaChatti">
-            <i class="fa fa-github" aria-hidden="true"></i>
+         <a data-tooltip="GitHub" href="https://github.com/OussamaChatti">
+            <i className="fa fa-github" aria-hidden="true"></i>
         </a>
 
-        <a class="social-icon" data-tooltip="LinkedIn" href="https://www.linkedin.com/in/oussama-chatti12">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
+        <a data-tooltip="LinkedIn" href="https://www.linkedin.com/in/oussama-chatti12">
+            <i className="fa fa-linkedin" aria-hidden="true"></i>
         </a>
 
-        <a class="social-icon" data-tooltip="Facebook" href="https://www.facebook.com/sql12">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
+        <a data-tooltip="Facebook" href="https://www.facebook.com/sql12">
+            <i className="fa fa-facebook" aria-hidden="true"></i>
         </a>
 
     </SocialContainer>

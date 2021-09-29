@@ -30,7 +30,7 @@ export const PhotoContainer = styled.img`
 `;
 
 export const SocialContainer = styled.div`
-display: flex;
+    display: flex;
     justify-content: center;
 
     a{
