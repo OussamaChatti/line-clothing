@@ -8,7 +8,6 @@ export const CollectionPageContainer = styled.div`
 export const TitleContainer = styled.h1`
     font-size: 28px;
     margin: 0 auto 25px;
-    
 `;
 
 export const ItemsContainer = styled.div`
