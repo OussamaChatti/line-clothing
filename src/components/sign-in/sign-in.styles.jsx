@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const SignInContainer = styled.div`
-    width:30vw;
+    width:40vw;
     display:flex;
     flex-direction:column;
-    margin-right: 50px;
+    margin-right: 30px;
 `;
 
 export const TitleContainer = styled.h1`
