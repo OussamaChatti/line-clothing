@@ -1,70 +1,60 @@
- import React from 'react';
- import { connect } from 'react-redux';
+import React,{useState} from 'react';
+import { connect } from 'react-redux';
 
- import CustomButton from '../custom-button/custom-button.jsx';
- import FormInput from '../form-input/form-input.jsx';
- 
- import { googleSignInStart,emailSignInStart } from '../../redux/user/user.actions.js';
+import CustomButton from '../custom-button/custom-button.jsx';
+import FormInput from '../form-input/form-input.jsx';
 
- import {SignInContainer,TitleContainer,ButtonsContainer} from './sign-in.styles';
+import { googleSignInStart,emailSignInStart } from '../../redux/user/user.actions.js';
 
- class SignIn extends React.Component {
-     constructor(props){
-         super(props);
-         this.state = {
-            email : '',
-            password : ''
-        }
-    }
+import {SignInContainer,TitleContainer,ButtonsContainer} from './sign-in.styles';
 
-    handleSubmit = async e => {
+const SignIn = ({emailSignInStart,googleSignInStart}) => {
+    const [userCredentials,setCredentials] = useState({email:'',password:''});
+    const {email,password} = userCredentials;
+
+    const handleSubmit = async e => {
         e.preventDefault();
-        const {emailSignInStart} = this.props;
-        const {email,password} = this.state;
-
         emailSignInStart(email,password);
     }
 
-      handlechange = e => {
+    const handlechange = e => {
         const {value,name} = e.target;
 
-        this.setState({[name]:value});
+        setCredentials({...userCredentials,[name]:value});
     }
 
-    render(){
-        const {googleSignInStart} = this.props;
-        return (
-            <SignInContainer>
-                <TitleContainer>Already have an account?</TitleContainer>
-                <span>Sign in with your email and password</span>
-                <form onSubmit={this.handleSubmit}>
-                    <FormInput
-                    handlechange={this.handlechange}
-                    name='email'
-                    type='email'
-                    required
-                    value={this.state.email}
-                    label='Email '
-                    />
-                    <FormInput
-                    handlechange={this.handlechange}
-                    name='password'
-                    type='password'
-                    required
-                    value={this.state.password}
-                    label='Password '
-                    />
-                    <ButtonsContainer>
-                        <CustomButton type='submit'>Sign in</CustomButton>
-                        <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn>
-                        Sign in with Google
-                        </CustomButton>
-                    </ButtonsContainer>
-                </form>
-            </SignInContainer>
-        );
-    }
- }
+    return (
+        <SignInContainer>
+            <TitleContainer>Already have an account?</TitleContainer>
+            <span>Sign in with your email and password</span>
+            <form onSubmit={handleSubmit}>
+                <FormInput
+                handlechange={handlechange}
+                name='email'
+                type='email'
+                required
+                value={email}
+                label='Email '
+                />
+                <FormInput
+                handlechange={handlechange}
+                name='password'
+                type='password'
+                required
+                value={password}
+                label='Password '
+                />
+                <ButtonsContainer>
+                    <CustomButton type='submit'>Sign in</CustomButton>
+                    <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn>
+                    Sign in with Google
+                    </CustomButton>
+                </ButtonsContainer>
+            </form>
+        </SignInContainer>
+    );
+}
+
 
 const mapDispatchToProps = (dispatch) => ({
     googleSignInStart : () => dispatch(googleSignInStart()),

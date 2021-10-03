@@ -50,7 +50,6 @@ export function* isUserAuthenticated() {
 export function* signOut() {
     try {
         yield auth.signOut();
-        console.log('done');
         yield put(signOutSuccess());
     } catch(error){
         yield put(signOutFailue(error.message));
