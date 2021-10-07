@@ -14,6 +14,12 @@ export const CartDropdownContainer = styled.div`
     top: 90px;
     right: 40px;
     z-index: 5;
+    @media screen and (max-width: 800px){
+        top:50px;
+        right:20px;
+        width: 200px;
+        height: 300px;
+    }
 `;
 
 export const CartItemsContainer = styled.div`
@@ -22,13 +28,24 @@ export const CartItemsContainer = styled.div`
     flex-direction: column;
     overflow: auto;
     overflow-x: hidden;
+    @media screen and (max-width: 800px){
+        height:200px;
+    }
 `;
 
 export const EmptyMessage = styled.span`
     font-size: 18px;
     margin: 50px auto;
+    @media screen and (max-width: 800px){
+        font-size:12px;
+
+    }
 `;
 
 export const CustomButtonStyled = styled(CustomButton)`
     margin-top: 5px;
+    @media screen and (max-width: 800px){
+        font-size:12px;
+    }
+
 `;

@@ -15,12 +15,16 @@ export const CollectionFooterContainer = styled.div`
     height: 5%;
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
 `;
 
 export const NameContainer = styled.span`
     width: 85%;
     margin-bottom: 15px;
+    font-size: 18px;
+    @media screen and (max-width: 800px){
+        width:75%;
+        font-size:10px;
+    }
 `;
 
 export const PriceContainer = styled.span`
@@ -32,6 +36,14 @@ export const PriceContainer = styled.span`
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 1px;
     }
+    @media screen and (max-width: 800px){
+        width:25%;
+        align-items:right;
+        font-size:9px;
+        &::after{
+            font-size:6px;
+            letter-spacing: unset;
+    }
 `;
 
 export const CustomButtonStyled = styled(CustomButton)`
@@ -40,6 +52,17 @@ export const CustomButtonStyled = styled(CustomButton)`
     position: absolute;
     top : 255px;
     display: none;
+    @media screen and (max-width: 800px){
+        top:150px;
+        display:block;
+        opacity:0.9;
+        min-width:unset;
+        padding: 0 5px;
+        font-size:8px;
+        align-items:center;
+        height:30px;
+        line-height:30px;
+    }
 `;
 
 export const CollectionItemContainer = styled.div`
@@ -57,6 +80,17 @@ export const CollectionItemContainer = styled.div`
         opacity: 0.85;
         display: flex;
     }
+    @media screen and (max-width: 800px){
+        width:21vw;
+        height: 200px;
+        margin-bottom: 15px;
+        &:hover ${ImageContainer}{
+            opacity: unset;
+          }
+        &:hover ${CustomButtonStyled}{
+            opacity: unset;
+        }
+      }
 `; 
 
 

@@ -10,6 +10,10 @@ export const CartItemContainer = styled.div`
     width: 30%;
     height: 85%;
     }
+    @media screen and (max-width: 800px){
+        height: 65px;
+ 
+    }
 `;
 
 export const ItemDetailsContainer = styled.div`
@@ -23,8 +27,13 @@ export const ItemDetailsContainer = styled.div`
 
 export const NameContainer = styled.span`
     font-size: 16px;
+    @media screen and (max-width: 800px){
+        font-size: 12px;
+    }
 `;
 
 export const PriceContainer = styled.span`
-    // empty for future styling
+    @media screen and (max-width: 800px){
+        font-size: 12px;
+    }
 `;

@@ -14,12 +14,15 @@ const buttonStyles = css`
 const googleSignInStyles = css`
     background-color:#4285f4;
     color:white;
-    width: 220px;
+    width: 200px;
     margin : 0 5px;
     &:hover{
      background-color:#357ae8;
      border:none;
     } 
+    @media screen and (max-width: 800px){
+        width: 150px;
+    }
 `;
 
 const invertedButtonStyles = css`
@@ -57,5 +60,13 @@ export const CustomButtonContainer = styled.button`
     display : flex;
     justify-content: center;
     ${getButtonStyles}
+    @media screen and (max-width: 800px){
+        min-width:unset;
+        padding: 5px 15px;
+        font-size:12px;
+        align-items:center;
+        height:30px;
+        line-height:30px;
+        }
 `;
  

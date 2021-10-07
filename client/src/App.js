@@ -13,7 +13,7 @@ import CheckoutPage from './pages/checkout/checkout';
 import AboutPage from './pages/about/about.jsx';
 import Header from './components/header/header.jsx';
 
-import './App.css';
+import { GlobalStyle } from './global.styles';
 
 const App = ({checkUserSession,currentUser}) => {
   useEffect(() => {
@@ -22,6 +22,7 @@ const App = ({checkUserSession,currentUser}) => {
   
   return (
   <div >
+    <GlobalStyle/>
       <Header/>
       <Switch>
           <Route exact path='/' component={HomePage}/>

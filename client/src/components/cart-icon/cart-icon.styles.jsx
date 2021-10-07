@@ -15,6 +15,10 @@ export const CartIconContainer = styled.div`
 export const ShoppingIconContainer = styled(ShoppingIcon)`
     width: 30px;
     height: 30px;
+    @media screen and (max-width: 800px){
+        width:25px;
+        height:25px;
+    }
 `;
 
 export const ItemCount = styled.span`
@@ -22,4 +26,7 @@ export const ItemCount = styled.span`
     font-size: 10px;
     font-weight: bold;
     bottom: 12px;
+    @media screen and (max-width: 800px){
+        font-size:9px;
+    }
 `;

@@ -6,14 +6,23 @@ export const AboutContainer = styled.div`
     p{
         color: gray;
         font-size: 20px;
+        @media screen and (max-width: 800px){
+            font-size: 15px;
+        }
     }
     h2{
         font-size: 30px;
         padding: 0 10px;
         text-align: center;
         color: #8b8b8b;
-
+        @media screen and (max-width: 800px){
+            font-size: 20px;
+        }
     }
+    @media screen and (max-width: 800px){
+        margin: 10px;
+    }
+    
 `;
 
 export const IconContainer = styled.img`
@@ -21,12 +30,20 @@ export const IconContainer = styled.img`
     width: 50px;
     margin-bottom: -15px;
     margin-left: 5px;
+    @media screen and (max-width: 800px){
+        height: 40px;
+        width: 40px;
+    }
 `;
 
 export const PhotoContainer = styled.img`
     border-radius: 50%;
     height: 300px;
     width: 300px;
+    @media screen and (max-width: 800px){
+        height: 200px;
+        width: 200px;
+    }
 `;
 
 export const SocialContainer = styled.div`
