@@ -8,6 +8,7 @@ import { selectCollection } from '../../redux/shop/shop.selectors';
 import { CollectionPageContainer,TitleContainer,ItemsContainer } from './collection.styles';
 
 const CollectionPage = ({ collection }) => {
+  if (!collection) {throw Error};
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
