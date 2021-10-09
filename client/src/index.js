@@ -8,6 +8,8 @@ import App from './App';
 import ScrollToTop from './components/scroll-to-top/scroll-to-top';
 import {store,persistor} from './redux/store';
 
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
 import './index.css';
 
 ReactDOM.render(
@@ -24,3 +26,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+serviceWorkerRegistration.register();

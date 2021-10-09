@@ -8,7 +8,9 @@ import { selectCollection } from '../../redux/shop/shop.selectors';
 import { CollectionPageContainer,TitleContainer,ItemsContainer } from './collection.styles';
 
 const CollectionPage = ({ collection }) => {
+  // quick fix for collection erroring if it's null and Error-Boundary doesn't fully catch it 
   if (!collection) {throw Error};
+  // this issue only happens if the connection is very slow
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
