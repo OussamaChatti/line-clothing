@@ -12,6 +12,9 @@ export const SignInSignUpContainer = styled.div`
         > *:first-child {
           margin-bottom: 50px;
           margin-top:30px;
+          @media screen and (max-width: 800px){
+            margin-bottom: 80px;
+          }
         }
       }
 `;

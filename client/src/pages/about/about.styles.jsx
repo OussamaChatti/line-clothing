@@ -9,6 +9,17 @@ export const AboutContainer = styled.div`
         @media screen and (max-width: 800px){
             font-size: 15px;
         }
+        @media screen and (max-width: 300px){
+            font-size:10px
+        }
+    }
+    h1{
+        @media screen and (max-width: 800px){
+            font-size: 22px;
+        }
+        @media screen and (max-width: 300px){
+            font-size:16px
+        }
     }
     h2{
         font-size: 30px;
@@ -18,9 +29,15 @@ export const AboutContainer = styled.div`
         @media screen and (max-width: 800px){
             font-size: 20px;
         }
+        @media screen and (max-width: 300px){
+            font-size: 14px;
+        }
     }
     @media screen and (max-width: 800px){
         margin: 10px;
+    }
+    @media screen and (max-width: 300px){
+        margin : 5px;
     }
     
 `;
@@ -34,6 +51,10 @@ export const IconContainer = styled.img`
         height: 40px;
         width: 40px;
     }
+    @media screen and (max-width: 300px){
+        height: 30px;
+        width: 30px;
+    }
 `;
 
 export const PhotoContainer = styled.img`
@@ -44,6 +65,10 @@ export const PhotoContainer = styled.img`
         height: 200px;
         width: 200px;
     }
+    @media screen and (max-width: 300px){
+        height: 100px;
+        width: 100px;
+    }
 `;
 
 export const SocialContainer = styled.div`
@@ -51,7 +76,7 @@ export const SocialContainer = styled.div`
     justify-content: center;
 
     a{
-        margin: 5px 30px;
+        margin: 5px 5px;
         color:  #007a99;
         border-radius: 50%;
         height: 50px;
@@ -66,6 +91,16 @@ export const SocialContainer = styled.div`
         }
         i{
             font-size: 25px; 
+        }
+        @media screen and (max-width: 800px){
+            i{
+                font-size: 20px; 
+            }
+        }
+        @media screen and (max-width: 300px){
+            i{
+                font-size: 14px; 
+            }
         }
     }
 `;

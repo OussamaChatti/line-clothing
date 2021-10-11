@@ -60,13 +60,31 @@ export const CustomButtonContainer = styled.button`
     display : flex;
     justify-content: center;
     ${getButtonStyles}
+    
     @media screen and (max-width: 800px){
         min-width:unset;
         padding: 5px 15px;
-        font-size:12px;
+        font-size:10px;
         align-items:center;
         height:30px;
         line-height:30px;
-        }
+    }
+    @media screen and (max-width: 500px){
+        min-width:unset;
+        padding: 0 5px;
+        font-size:10px;
+        align-items:center;
+        height:30px;
+        line-height:30px;
+}
+    @media screen and (max-width: 300px){
+            min-width:unset;
+            padding: 0;
+            font-size:8px;
+            align-items:center;
+            height:30px;
+            line-height:30px;
+    }
+
 `;
  

@@ -33,7 +33,10 @@ export const HeaderBlock = styled.div`
     }
     @media screen and (max-width: 800px){
         font-size:12px;
-      }
+    }
+    @media screen and (max-width: 370px){
+      font-size:8px;
+    }
 `;
 export const TotalContainer = styled.div`
     margin-top: 30px;
@@ -42,7 +45,10 @@ export const TotalContainer = styled.div`
     @media screen and (max-width: 800px){
         margin-top:10px;
         font-size:18px;
-      }
+    }
+    @media screen and (max-width: 300px){
+      font-size:12px;
+    }
 `;
 
 export const TestWarning = styled.div`
@@ -70,5 +76,14 @@ export const TestWarning = styled.div`
         & pre{
             font-size: 6px;
         }
-      }
+    }
+    @media screen and (max-width: 300px){
+        font-size: 6px;
+        &::first-line{
+            font-size: 4px; 
+        }
+        & pre{
+            font-size: 4px;
+        }
+    }
 `;

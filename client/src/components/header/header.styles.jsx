@@ -44,6 +44,10 @@ export const OptionLink = styled(Link)`
         padding: 7px;
         font-size: 12px;
     }
+    @media screen and (max-width: 320px){
+        padding: 2px;
+        font-size: 10px;
+    }
 `;
 
 export const Logo = styled.img`
@@ -58,4 +62,10 @@ export const Logo = styled.img`
         left:4px;
         top: 9px;
     }
+    @media screen and (max-width: 300px){
+        width:45px;
+        height:40px;
+        left:2px;
+        top: 9px;
+}
 `;
